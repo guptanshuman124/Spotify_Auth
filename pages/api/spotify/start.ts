@@ -32,6 +32,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     scope: scopes,
     redirect_uri: redirectUri,
     state,
+    show_dialog:'true',
   });
 
   const redirectUrl = `${SPOTIFY_AUTH_URL}?${params.toString()}`;
